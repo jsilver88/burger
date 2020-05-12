@@ -1,0 +1,34 @@
+<h1>Eat Dat Burger</h1>
+
+<h2>Grab a burger!</h2>
+
+<ul>
+    {{#each burgers}}
+    {{#unless devoured}}
+    {{> burgers/burgerNotEaten-block}}
+    {{/unless}}
+    {{/each}}
+</ul>
+
+<h2>Burgers devoured</h2>
+
+<ul>
+    {{#each burgers}}
+    {{#if devoured}}
+    {{> burgers/burgerEaten-block}}
+    {{/if}}
+    {{/each}}
+</ul>
+
+<h2>Type in any burger</h2>
+
+<form class="create-form">
+    <div class="form-group">
+        <input type="text" name="burger_name" id="newBurger" placeholder="Type in any burger here!">
+        <button type="submit">Add your burger</button>
+    </div>
+</form>
+
+<div class="footer">
+    <p>&copy; 2020 Jared Silver</p>
+</div>
