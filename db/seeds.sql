@@ -1,7 +1,7 @@
 INSERT INTO
     burgers (burger_name, devoured)
 VALUES
-    ('Cheeseburger', false);
+    ('Cheese Burger', false);
 
 INSERT INTO
     burgers (burger_name, devoured)
