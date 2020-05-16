@@ -9,7 +9,7 @@ function printQuestionMarks(num) {
 
     return arr.toString();
 }
-
+// Taken from CatsApp/MvcExample activity
 // Helper function to convert object key/value pairs to SQL syntax
 function objToSql(ob) {
     var arr = [];
