@@ -1,34 +1,39 @@
-<h1>Eat Dat Burger</h1>
+<h1>Eat Da Burger</h1>
+<div class="page-container">
+    <h2 class="first-title">Grab a burger!</h2>
 
-<h2>Grab a burger!</h2>
-
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    {{> burgers/burgerNotEaten-block}}
-    {{/unless}}
-    {{/each}}
-</ul>
-
-<h2>Burgers devoured</h2>
-
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    {{> burgers/burgerEaten-block}}
-    {{/if}}
-    {{/each}}
-</ul>
-
-<h2>Add a custom burger</h2>
-
-<form class="burger-form">
-    <div class="form-group">
-        <input type="text" name="burger_name" id="newBurger" placeholder="Add your custom burger here!">
-        <button type="submit" id="submit">Add your burger</button>
+    <div class="burger-container">
+        <ul class="uneaten">
+            {{#each burgers}}
+            {{#unless devoured}}
+            {{> burgers/burgerNotEaten-block}}
+            {{/unless}}
+            {{/each}}
+        </ul>
     </div>
-</form>
 
-<div class="footer">
-    <p>&copy; 2020 Jared Silver</p>
+    <h2 class="devoured">Burgers devoured</h2>
+
+    <div class="burger-container">
+        <ul class="eaten">
+            {{#each burgers}}
+            {{#if devoured}}
+            {{> burgers/burgerEaten-block}}
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+
+    <h2>Add a custom burger</h2>
+
+    <form class="burger-form">
+        <div class="form-group">
+            <input type="text" name="burger_name" id="newBurger" placeholder="Add your custom burger here!">
+            <button type="submit" id="submit">Add your burger</button>
+        </div>
+    </form>
+
+    <div class="footer">
+        <p class="footer-note">&copy; 2020 Jared Silver</p>
+    </div>
 </div>
